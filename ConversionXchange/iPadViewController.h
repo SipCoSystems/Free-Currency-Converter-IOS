@@ -17,12 +17,31 @@
 // This application uses free.currencyconverterapi.com  API , you can change  it to any other API provider
 
 
-#import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface iPadViewController : ViewController<UIPickerViewDataSource,UIPickerViewDelegate,NSURLConnectionDelegate,NSURLConnectionDataDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic)NSArray*fromArray1;
+
+@property (strong, nonatomic)NSArray*toArray1;
+
+
+
+@property (strong, nonatomic) IBOutlet UIPickerView *pickerView3;
+@property (strong, nonatomic) IBOutlet UIPickerView *pickerView4;
+
+@property (strong, nonatomic) IBOutlet UITextField *textAmount1;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *spinner1;
+
+
+- (IBAction)convertBtn1:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelText1;
+
+
+
+
 
 
 @end
-
